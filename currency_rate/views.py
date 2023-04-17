@@ -8,7 +8,7 @@ from .models import Сurrency
 
 def index(request):
     data = Сurrency.objects.filter(date=date.today())
-    if not data.exists:
+    if not data.exists():
         currence = response_data()
         data, _ = Сurrency.objects.get_or_create(usd=currence['USD'], eur=currence['EUR'])
     else:
