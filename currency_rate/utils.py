@@ -1,10 +1,17 @@
+import os
 import requests
 from bs4 import BeautifulSoup
+from dotenv import load_dotenv
+
+
+load_dotenv()
+
+URL = os.getenv('URL')
 
 
 def response_data():
     try:
-        response = requests.get('https://finance.rambler.ru/currencies/')
+        response = requests.get(URL)
         if response.status_code != 200:
             return 
     except:
