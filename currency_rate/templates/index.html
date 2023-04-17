@@ -6,9 +6,10 @@
         <label>Курсы валют</label>
     </div>
     <div>
-        {% for key, value in data.items %}
-            {{ key }} = {{ value }}
-        {% endfor %}
+        USD = {{ data.usd }}
+    </div>
+    <div>
+        EUR = {{ data.eur }}
     </div>
 </main>
 {% endblock %}
