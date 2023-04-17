@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from .utils import response_data
 
-# Create your views here.
+
+def index(request):
+    print(response_data())
+    return render(request, 'index.html', {'data': response_data()})
